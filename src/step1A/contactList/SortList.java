@@ -14,10 +14,7 @@ public class SortList {
 
     public SortList(){
 
-        System.out.println("melduje się SortList! gotów do akcji");
-
-        alphabeticOrder.put('0',0);
-        alphabeticOrder.remove(0);
+        alphabeticOrder.put(null,0);
         alphabeticOrder.put('_',1);
         alphabeticOrder.put(' ',2);
         alphabeticOrder.put('!',3);
@@ -134,11 +131,7 @@ public class SortList {
                 int z = 0;
                 int min = 0;
                 Person paramTemp = mapToSort.get(0);
-                System.out.println("");
-                System.out.println("===>    a =" + firstElementIndex);
                 for (int secondElementIndex = firstElementIndex; secondElementIndex < mapToSort.size(); secondElementIndex++) {
-                    System.out.println("i=" + secondElementIndex);
-                   // for(int y = 0; y < mapToSort.get(a).getName().length(); y++)
                     String firstElementName = mapToSort.get(firstElementIndex).getName();
                     if (secondElementIndex == firstElementIndex) {
                         min = alphabeticOrder.get(firstElementName.charAt(0));
@@ -150,9 +143,6 @@ public class SortList {
                         min = alphabeticOrder.get(secondElementName.charAt(0));
                         z = secondElementIndex;
                         paramTemp = mapToSort.get(secondElementIndex);
-                        System.out.println("min=" + min);
-                        System.out.println("z=" + z);
-                        System.out.println("paramTemp" + paramTemp);
                     }
                     if (alphabeticOrder.get(secondElementName.charAt(0)).equals(min)){
                         for(int charIndex = 0; charIndex < secondElementName.length(); charIndex++){
@@ -173,19 +163,12 @@ public class SortList {
                         }
                     }
                 }
-                System.out.println("======> z =" + z);
-                System.out.println("======> firstElementIndex =" + firstElementIndex);
-                System.out.println("======> paramTempName =" + paramTemp.getName());
-                System.out.println("======> mapToSort.get(firstElementIndex) =" + mapToSort.get(firstElementIndex).getName());
-                mapToSort.put(z,mapToSort.get(firstElementIndex));//.replace?
-                mapToSort.put(firstElementIndex,paramTemp);//replace
-
-                System.out.println("mapToSort.get(z)= " + mapToSort.get(z));
-                System.out.println("mapToSort.get(a)= " + mapToSort.get(firstElementIndex));
+                mapToSort.put(z,mapToSort.get(firstElementIndex));
+                mapToSort.put(firstElementIndex,paramTemp);
             }
-            System.out.print("mapToSort = ");
+            /*System.out.print("mapToSort = ");
             for (int i = 0; i < mapToSort.size(); i++)
-                System.out.print(mapToSort.get(i) + ",");
+                System.out.print(mapToSort.get(i) + ",");*/
 
     }
 }

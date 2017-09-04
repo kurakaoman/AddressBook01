@@ -15,10 +15,6 @@ public class ContactList {
     public ContactList() {
         System.out.println("contactList melduje gotowość do działania");
         //- Daj tu obsluge wyjatku.. ktoa moglby np chcec wyświetlić kontakt o numerze rzekraczajacym faktyczny rozmar mapy
-        // -do każdej metody dodaj na koncu SortList!!!
-        //-sprawdz czy dziala- rozwiaz problem z wyswieltalniem tego kontaktu który właśnie utworzyliśmy ( jego numeru porzadkowego na liście... może poprzez nie equals a == (?), narazie masz rozwiazanie tymczasowe, bedzie się kopać jak uporzadkujeszliste , tzn zmieni swoja pozycje na liście
-        //-On napewno bierze metode edit ze stepa 1 A w AdressBook ... i pozosdtałe metody?, nie rozuemim dla czego tak i jak sobie z tym radzić , możliwe że źle przekopiowąłem to wszystko bo używałem Refactor/Copy...
-        //-zmien nazwe mapy contactMap
     }
 
     public Map<Integer, Person> contactMap = new HashMap<>();
@@ -97,7 +93,6 @@ public class ContactList {
         } else {
             System.out.println("Wpisane dane nie identyfikują żadnego kontaktu z listy");
         }
-        //sortList.selectionSort(contactMap);
     }
 
     public void editContact(Integer positionAtList, String name, String surname, String country, String postalCode, String city, String streat, String phoneNumber) {
@@ -110,7 +105,6 @@ public class ContactList {
         } else {
             System.out.println("Wpisane dane nie identyfikują żadnego kontaktu z listy");
         }
-        //sortList.selectionSort(contactMap);
     }
 
     private void printContact(int i, Person person) {

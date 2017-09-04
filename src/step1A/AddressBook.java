@@ -52,8 +52,6 @@ public class AddressBook {
                 String surname = czytnik.nextLine();
                 contactList.showContact(poz, name, surname);
                 start(czytnik,contactList);
-
-                //System.out.println("Tu masz zawołać metodę która wyświetli wybrany kontakt ");
             }
             if(scan.equals("3")) {
                 System.out.println("Podaj Imię kontaktu:" + System.lineSeparator());
@@ -73,7 +71,6 @@ public class AddressBook {
                 String phoneNumber = czytnik.nextLine();
                 contactList.addContact(name, surname, country, postalCode, city, street, phoneNumber);
                 start(czytnik,contactList);
-                //System.out.println("Tu masz zawołać metodę która dopisze nowy kontakt do listy i wyświetli Urzytkownik XXX został dopisany do listy ");
             }
             if(scan.equals("4")) {
                 System.out.println("Podaj pozycję którą według listy zajmuje żądany przez Ciebie kontakt:" + System.lineSeparator());
@@ -85,7 +82,6 @@ public class AddressBook {
                 String surname = czytnik.nextLine();
                 contactList.erazeContact(poz, name, surname);
                 start(czytnik,contactList);
-                //System.out.println("Tu masz zawołać metodę która usunie wybrany kontakt z listy i wyświetli Urzytkownik XXX został Usunięty ");
             }
             if(scan.equals("5")) {
                 System.out.println("Podaj pozycję którą według listy zajmuje żądany przez Ciebie kontakt:" + System.lineSeparator());
@@ -108,8 +104,6 @@ public class AddressBook {
                 String phoneNumber = czytnik.nextLine();
                 contactList.editContact(poz, name, surname, country, postalCode, city, street, phoneNumber);
                 start(czytnik,contactList);
-                // Czy on napewno bierze metode edit ze stepa 1 A ??
-                //System.out.println("Tu masz zawołać metodę która edytuje wybrany kontakt i wyświetli Urzytkownik XXX został zmodyfikowany ");
             }
             if(scan.equals("6")) {
                 System.out.println("Do widzenia ;-)");
